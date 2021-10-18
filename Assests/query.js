@@ -6,3 +6,10 @@ function genOneCallQueryURL(lat, lon) {
     var queryAppID = "&appid=";
     return queryURLAndLat + lat + queryLon + lon + queryUnit + queryExclude+ queryAppID + appID;
 }
+
+function genWeatherQueryURL(city) {
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=";
+    var queryUnit = "&units=imperial";
+    var queryAppID = "&appid=";
+    return queryURL + city + queryUnit + queryAppID + appID;
+}
