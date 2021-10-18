@@ -90,3 +90,18 @@ function dispWeather(location) {
 }
 
 initPage();
+
+$("#searchBtn").on("click", (event) => {
+    event.preventDefault();
+    dispWeather($("#searchLocation").val())
+    srchHistAry.unshift($("#searchLocation").val());
+    if (srchHistAry.length > 6) {
+        srchHistAry.length = 6;
+    }
+    localStorage.clear();
+    localStorage.setItem("searchHistory", JSON.stringify(srchHistAry));
+    renderSearchHistory();
+});
+$("#searchHistory").on("click", (event) => {
+    dispWeather(event.target.innerText);
+});
