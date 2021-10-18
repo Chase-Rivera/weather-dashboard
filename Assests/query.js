@@ -13,3 +13,9 @@ function genWeatherQueryURL(city) {
     var queryAppID = "&appid=";
     return queryURL + city + queryUnit + queryAppID + appID;
 }
+
+function genIconURL(icon) {
+    var iconURL = "https://openweathermap.org/img/w/";
+    var iconFormat = ".png";
+    return iconURL + icon +iconFormat;
+}
