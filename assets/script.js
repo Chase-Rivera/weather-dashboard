@@ -70,6 +70,8 @@ function dispWeather(location) {
                         <h2 class="fs-5 fw-bold>Weekly Forecast:</h2>
                         <div id=weeklyForecast" class="d-flex flex-row justify-content-between"></div>
                     </section>
+
+                    
                 `);
 
                 for (i=1;i<6;i++) {
