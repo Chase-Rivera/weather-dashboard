@@ -1,4 +1,4 @@
-var APIKey = "a61aea7f1f0137536dc953c81b63e73f"; //00ba46197ec62f9c0dde07bd4fde6252
+var appID = "a61aea7f1f0137536dc953c81b63e73f"; //00ba46197ec62f9c0dde07bd4fde6252 a61aea7f1f0137536dc953c81b63e73f
 
 var srchHistAry = [];
 function renderSearchHistory() {
@@ -23,7 +23,7 @@ function initPage() {
 }
 
 function dispWeather(location) {
-    fetch(genWeatherQueryURL(location))
+    fetch (genWeatherQueryURL(location))
         .then((response) => {
             if (!response.ok) {
                 throw response.json();
